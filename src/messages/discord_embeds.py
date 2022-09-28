@@ -7,7 +7,7 @@ import traceback
 import discord
 from version import __version__
 import numpy as np
-from discord import Webhook, RequestsWebhookAdapter, Color, InvalidArgument
+from discord import Webhook, Color
 import json
 class DiscordEmbeds(GenericApi):
     def __init__(self):
@@ -20,12 +20,12 @@ class DiscordEmbeds(GenericApi):
         hook = None
         if not hook_url:
             hook_url = Config().general['custom_message_hook']
-        if hook_url:
-            try:
-                hook = Webhook.from_url(hook_url, adapter=RequestsWebhookAdapter(), )
-            except BaseException as e:
-                Logger.warning(f"Your custom_message_hook URL {hook_url} is invalid, Discord updates will not be sent")
-                Logger.error(f"Error initializing webhook {hook_url}: {e}")
+        # if hook_url:
+        #     try:
+        #         # hook = Webhook.from_url(hook_url, adapter=RequestsWebhookAdapter(), )
+        #     except BaseException as e:
+        #         Logger.warning(f"Your custom_message_hook URL {hook_url} is invalid, Discord updates will not be sent")
+        #         Logger.error(f"Error initializing webhook {hook_url}: {e}")
         return hook
 
     def send_item(self, item: str, image:  np.ndarray, location: str, ocr_text: str = '', bnip_keep_expression: str = '', item_props: dict = {}):
