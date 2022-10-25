@@ -9,7 +9,7 @@
 //================= Utility ================
 //------------------------------------------
 
-[Type] == Gold # [Gold] >= 5000
+[Type] == Gold # [Gold] >= 500
 [Name] == Scrolloftownportal
 [Name] == Scrollofidentify
 
@@ -17,8 +17,8 @@
 //================= Unique Charms ================
 //------------------------------------------------
 
-//[Name] == Grandcharm && [Quality] == Unique     // Gheed's Fortune
-//[Name] == Smallcharm && [Quality] == Unique     // Annihilus Charm
+[Name] == Grandcharm && [Quality] == Unique     // Gheed's Fortune
+[Name] == Smallcharm && [Quality] == Unique     // Annihilus Charm
 
 //------------------------------------------
 //================= Potions ================
