@@ -52,7 +52,7 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Lumrune && [Name] <= Zodrune
+[Name] >= Ortrune && [Name] <= Zodrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Tirrune
@@ -137,8 +137,8 @@
 
 [Name] == Grandcharm && [Quality] == Magic # [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 60 // Plain +15 All Res
 [Name] == Grandcharm && [Quality] == Magic # [Itemaddskilltab] >= 1 // All Plain Skillers
-//[Name] == Grandcharm && [Quality] == Magic # ([Coldresist] >= 30 || [Fireresist] >= 30 || [Lightresist] >= 30 || [Poisonresist] >= 30)      // All +30 Single Res Gc
-//[Name] == Grandcharm && [Quality] == Magic && [Flag] != Ethereal # [Maxhp] >= 40        // All +40 Max Hp Gc
+[Name] == Grandcharm && [Quality] == Magic # ([Coldresist] >= 30 || [Fireresist] >= 30 || [Lightresist] >= 30 || [Poisonresist] >= 30)      // All +30 Single Res Gc
+[Name] == Grandcharm && [Quality] == Magic && [Flag] != Ethereal # [Maxhp] >= 40        // All +40 Max Hp Gc
 //[Name] == Grandcharm && [Quality] == Magic # [Fhr] >= 12 && [Itemaddskilltab] >= 1 // All Plain Fhr Skillers
 //[Name] == Grandcharm && [Quality] == Magic # [Frw] >= 7 && [Itemaddskilltab] >= 1 // All Plain Frw Skillers
 
@@ -594,9 +594,9 @@
 //================= Boots ================
 //----------------------------------------
 
-[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && ([Lightresist]+[Fireresist] >= 35 || [Coldresist]+[Lightresist] >= 35 || [Fireresist]+[Coldresist] >= 35)        // Dual Res
-[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && [Coldresist] >= 20 && [Fireresist] >= 20 && [Lightresist] >= 20       // Tri Res
-[Type] == Boots && [Quality] == Rare && [Flag] == Ethereal # [Frw] >= 20 && [Fhr] >= 10 && [Dexterity] >= 8 && [Fireresist]+[Lightresist]+[Coldresist] >= 60 && [Itemreplenishdurability] >= 1       // Eth Rep
+//[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && ([Lightresist]+[Fireresist] >= 35 || [Coldresist]+[Lightresist] >= 35 || [Fireresist]+[Coldresist] >= 35)        // Dual Res
+//[Type] == Boots && [Quality] == Rare && [Flag] != Ethereal # [Frw] >= 30 && [Fhr] >= 10 && [Dexterity] >= 8 && [Coldresist] >= 20 && [Fireresist] >= 20 && [Lightresist] >= 20       // Tri Res
+[Type] == Boots && [Quality] == Rare && [Flag] == Ethereal # [Frw] >= 10 && [Fhr] >= 10  && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 90       // Eth Rep
 
 //-----------------------------------------
 //================= Gloves ================
@@ -605,10 +605,10 @@
 //[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Dexterity]+[Strength] >= 25 && [Coldresist]+[Fireresist]+[Lightresist] >= 55
 //[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && [Dexterity]+[Strength] >= 20 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2 || [Coldresist]+[Fireresist]+[Lightresist] >= 35 || [Coldresist]+[Fireresist] >= 40 || [Coldresist]+[Lightresist] >= 40 || [Fireresist]+[Lightresist] >= 40)
 [Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && ([Dexterity] >= 10 || [Strength] >= 10 || [Strength]+[Dexterity] >= 20 || [Dexterity] >= 12 && [Coldresist]+[Fireresist]+[Lightresist] >= 25 || [Lifeleech]+[Manaleech] >= 6)
-[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && ([Dexterity]+[Strength] >= 20) && ([Coldresist]+[Fireresist]+[Lightresist] >= 35 || [Coldresist]+[Fireresist] >= 40 || [Coldresist]+[Lightresist] >= 40 || [Fireresist]+[Lightresist] >= 40)		// Dual Stat Resistance Gloves
-[Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && ([Dexterity] >= 12 || [Strength] >= 12) && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && [Coldresist]+[Fireresist]+[Lightresist] >= 25 && [Itemreplenishdurability] >= 1
+[Type] == Gloves && [Quality] == Rare && [Flag] != Ethereal # [Ias] >= 20 && ([Dexterity]+[Strength] >= 20) && ([Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 90 || [Coldresist]+[Fireresist] >= 60 || [Coldresist]+[Lightresist] >= 60 || [Fireresist]+[Lightresist] >= 60)		// Dual Stat Resistance Gloves
+[Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && ([Dexterity] >= 12 || [Strength] >= 12) && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 90 && [Itemreplenishdurability] >= 1
 [Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Enhanceddefense] >= 180 && [Itemreplenishdurability] >= 1 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && ([Ias] >= 10 || [Dexterity]+[Strength] >= 10 || [Coldresist]+[Fireresist]+[Lightresist] >= 20)
-[Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && [Dexterity]+[Strength] >= 20 && ([Coldresist]+[Fireresist]+[Lightresist] >= 35 || [Coldresist]+[Fireresist] >= 40 || [Coldresist]+[Lightresist] >= 40 || [Fireresist]+[Lightresist] >= 40) && [Itemreplenishdurability] >= 1
+[Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && [Dexterity]+[Strength] >= 20 && ([Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 90) && [Itemreplenishdurability] >= 1
 [Type] == Gloves && [Quality] == Rare && [Flag] == Ethereal # [Ias] >= 20 && [Dexterity]+[Strength] >= 20 && ([Bowandcrossbowskilltab] == 2 || [Passiveandmagicskilltab] == 2 || [Javelinandspearskilltab] == 2) && [Itemreplenishdurability] >= 1
 
 //=======================================================================================//
@@ -696,16 +696,16 @@
 //-----------------------------------------------
 //([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 0
 //([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Normal && [Flag] != Ethereal # [Sockets] == 3       // 3os Socketed
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 0         // Delirium Or Dream Perfect
-([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 10 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
+//([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 80 && [Sockets] == 0         // Delirium Or Dream Perfect
+//([Name] == Corona || [Name] == Demonhead || [Name] == Bonevisage || [Name] == Diadem) && [Quality] == Superior && [Flag] != Ethereal # [Enhanceddefense] >= 80 && [Sockets] == 3         // 3os Socketed Delirium Or Dream Perfect
 
 //-------------------------------------------------------
 //================= Barbarian Helm Bases ================
 //-------------------------------------------------------
 
 // <<<<<<<<< [ Non-Ethereal Socketed/Non-Socketed Barbarian Helms ] >>>>>>>>>
-[Type] == Primalhelm && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillbattleorders]+[Skillbattlecommand] >= 4 || [Skillbattleorders]+[Skillfinditem] >= 4 || [Skillbattleorders]+[Skillshout] >= 4) && [Sockets] == 0
-[Type] == Primalhelm && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillbattleorders]+[Skillbattlecommand] >= 4 || [Skillbattleorders]+[Skillfinditem] >= 4 || [Skillbattleorders]+[Skillshout] >= 4) && [Sockets] == 3          // Socketed
+//[Type] == Primalhelm && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillbattleorders]+[Skillbattlecommand] >= 4 || [Skillbattleorders]+[Skillfinditem] >= 4 || [Skillbattleorders]+[Skillshout] >= 4) && [Sockets] == 0
+//[Type] == Primalhelm && [Class] == Elite && ([Quality] == Normal || [Quality] == Superior) && [Flag] != Ethereal # ([Skillbattleorders]+[Skillbattlecommand] >= 4 || [Skillbattleorders]+[Skillfinditem] >= 4 || [Skillbattleorders]+[Skillshout] >= 4) && [Sockets] == 3          // Socketed
 
 //---------------------------------------------------
 //================= Druid Pelt Bases ================
