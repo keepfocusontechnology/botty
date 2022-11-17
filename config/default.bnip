@@ -378,7 +378,7 @@
 //[Name] == Throwingspear && [Quality] == Magic # [Warcriesskilltab] >= 3
 
 // <<<<<<<<< [ Gg Club ] >>>>>>>>>
-([Name] == Club || [Name] == Spikedclub) && [Quality] == Magic # [Warcriesskilltab] >= 3 && [Strength] > 0
+// ([Name] == Club || [Name] == Spikedclub) && [Quality] == Magic # [Warcriesskilltab] >= 3 && [Strength] > 0
 
 // <<<<<<<<< [ Magic Scepters ] >>>>>>>>>
 //[Type] == Scepter && [Quality] == Magic # [Paladinskills]+[Skillblessedhammer] >= 5 && ([Skillconcentration] >= 3 || [Fcr] >= 10 && [Skillconcentration] >= 2)
