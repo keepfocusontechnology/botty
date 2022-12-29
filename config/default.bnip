@@ -52,46 +52,46 @@
 //================= Runes ================
 //----------------------------------------
 
-[Name] >= Ortrune && [Name] <= Zodrune
+//[Name] >= Ortrune && [Name] <= Zodrune
 //[Name] == Elrune
 //[Name] == Eldrune
 //[Name] == Tirrune
 //[Name] == Nefrune
 //[Name] == Ethrune
 //[Name] == Ithrune
-//[Name] == Talrune
-//[Name] == Ralrune
+[Name] == Talrune
+[Name] == Ralrune
 //[Name] == Ortrune
 //[Name] == Thulrune
-//[Name] == Amnrune
-//[Name] == Solrune
+[Name] == Amnrune
+[Name] == Solrune
 //[Name] == Shaelrune
 //[Name] == Dolrune
-//[Name] == Helrune
-//[Name] == Iorune
-//[Name] == Lumrune
-//[Name] == Korune
-//[Name] == Falrune
-//[Name] == Lemrune
-//[Name] == Pulrune
-//[Name] == Umrune
-//[Name] == Malrune
-//[Name] == Istrune
-//[Name] == Gulrune
-//[Name] == Vexrune
-//[Name] == Ohmrune
-//[Name] == Lorune
-//[Name] == Surrune
-//[Name] == Berrune
-//[Name] == Jahrune
-//[Name] == Chamrune
-//[Name] == Zodrune
+[Name] == Helrune
+[Name] == Iorune
+[Name] == Lumrune
+[Name] == Korune
+[Name] == Falrune
+[Name] == Lemrune
+[Name] == Pulrune
+[Name] == Umrune
+[Name] == Malrune
+[Name] == Istrune
+[Name] == Gulrune
+[Name] == Vexrune
+[Name] == Ohmrune
+[Name] == Lorune
+[Name] == Surrune
+[Name] == Berrune
+[Name] == Jahrune
+[Name] == Chamrune
+[Name] == Zodrune
 
 //---------------------------------------
 //================= Gems ================
 //---------------------------------------
 
-//[Name] == Chippedamethyst
+[Name] == Chippedamethyst
 //[Name] == Chippeddiamond
 //[Name] == Chippedemerald
 //[Name] == Chippedruby
@@ -112,20 +112,20 @@
 //[Name] == Skull
 //[Name] == Sapphire
 //[Name] == Topaz
-//[Name] == Flawlessamethyst
-//[Name] == Flawlessdiamond
-//[Name] == Flawlessemerald
-//[Name] == Flawlessruby
-//[Name] == Flawlesssapphire
-//[Name] == Flawlessskull
-//[Name] == Flawlesstopaz
-//[Name] == Perfectamethyst
-//[Name] == Perfectdiamond
-//[Name] == Perfectemerald
-//[Name] == Perfectruby
-//[Name] == Perfectsapphire
-//[Name] == Perfectskull
-//[Name] == Perfecttopaz
+[Name] == Flawlessamethyst
+[Name] == Flawlessdiamond
+[Name] == Flawlessemerald
+[Name] == Flawlessruby
+[Name] == Flawlesssapphire
+[Name] == Flawlessskull
+[Name] == Flawlesstopaz
+[Name] == Perfectamethyst
+[Name] == Perfectdiamond
+[Name] == Perfectemerald
+[Name] == Perfectruby
+[Name] == Perfectsapphire
+[Name] == Perfectskull
+[Name] == Perfecttopaz
 
 //=========================================================================//
 //<<<<<<<<<<<<<<<<<<<<<<<<<<++++ Magic Items ++++>>>>>>>>>>>>>>>>>>>>>>>>>>//
