@@ -24,6 +24,8 @@ def get_slot_pos_and_img(img: np.ndarray, column: int, row: int) -> tuple[tuple[
     :param row: Row in the Inventory
     :return: Returns position and image of the cut area as such: [[x, y], img]
     """
+    if img is None:
+        return None, None
     top_left_slot = (Config().ui_pos["inventory_top_left_slot_x"], Config().ui_pos["inventory_top_left_slot_y"])
     slot_width = Config().ui_pos["slot_width"]
     slot_height= Config().ui_pos["slot_height"]
@@ -45,6 +47,8 @@ def slot_has_item(slot_img: np.ndarray) -> bool:
     :param slot_img: Image of the slot
     :return: Bool if there is an item or not
     """
+    if slot_img is None:
+        return False
     slot_img = cv2.cvtColor(slot_img, cv2.COLOR_BGR2HSV)
     avg_brightness = np.average(slot_img[:, :, 2])
     return avg_brightness > 16.0

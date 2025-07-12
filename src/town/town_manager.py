@@ -31,18 +31,19 @@ class TownManager:
 
     @staticmethod
     def get_act_from_location(loc: Location) -> Location:
-        location = None
+        if loc is None:
+            return None
         if loc.upper().startswith("A5_"):
-            location = Location.A5_TOWN_START
-        elif loc.upper().startswith("A4_"):
-            location = Location.A4_TOWN_START
-        elif loc.upper().startswith("A3_"):
-            location = Location.A3_TOWN_START
-        elif loc.upper().startswith("A2_"):
-            location = Location.A2_TOWN_START
-        elif loc.upper().startswith("A1_"):
-            location = Location.A1_TOWN_START
-        return location
+            return Location.A5_TOWN_START
+        if loc.upper().startswith("A4_"):
+            return Location.A4_TOWN_START
+        if loc.upper().startswith("A3_"):
+            return Location.A3_TOWN_START
+        if loc.upper().startswith("A2_"):
+            return Location.A2_TOWN_START
+        if loc.upper().startswith("A1_"):
+            return Location.A1_TOWN_START
+        return None
 
     def wait_for_town_spawn(self, timeout: float = 30) -> Location:
         """Wait for the char to spawn in town after starting a new game

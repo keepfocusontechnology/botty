@@ -5982,7 +5982,7 @@ ITEM_MISC = {
         "NTIPAliasClassID": 605,
         "NTIPAliasType": 84,
         "dimensions": [1, 3],
-        "uniques": ["GHEEDSFORTUNE"]
+        "uniques": ["GHEEDSFORTUNE","ANEVILFORCE"]
     },
     "greaterhealingpotion":
     {
