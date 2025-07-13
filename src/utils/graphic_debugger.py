@@ -287,6 +287,8 @@ class GraphicDebuggerController:
         search_templates = ["A5_TOWN_0", "A5_TOWN_1", "A5_TOWN_2", "A5_TOWN_3"]
         while 1:
             img = grab()
+            # 初始化 combined_img，避免未赋值报错
+            combined_img = img.copy()
             # Show Town A5 template matches
             scores = {}
             for template_name in search_templates:

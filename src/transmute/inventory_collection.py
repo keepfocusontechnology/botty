@@ -29,10 +29,14 @@ class InventoryCollection:
         self._empty_cells.discard(position)
         self._all_items[item].append(position)
 
-    def pop(self, item: str) -> "tuple(int, int)":
-        poped = self._all_items[item].pop()
-        self._empty_cells.add(poped)
-        return poped
+    def pop(self, item):
+        if item in self._all_items and self._all_items[item]:
+            poped = self._all_items[item].pop()
+            return poped
+        else:
+            # 可以选择返回 None 或抛出自定义异常，或记录日志
+            # Logger.warning(f"Try to pop from empty list for item: {item}")
+            return None
 
     def set_empty(self, position: "tuple(int, int)") -> None:
         self._empty_cells.add(position)

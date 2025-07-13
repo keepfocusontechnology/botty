@@ -76,6 +76,10 @@ def main():
         print(f"ERROR: Unkown logg_lvl {Config().advanced_options['logg_lvl']}. Must be one of [info, debug]")
     startup_checks()
 
+    # 新增日志输出show_belt快捷键
+    show_belt_key = Config().char["show_belt"] if "show_belt" in Config().char else None
+    Logger.info(f'Current show_belt hotkey: {show_belt_key}')
+
     print(f"============ Botty {__version__} [name: {Config().general['name']}] ============")
     print("\nFor gettings started and documentation\nplease read https://github.com/aeon0/botty\n")
     table = BeautifulTable()
