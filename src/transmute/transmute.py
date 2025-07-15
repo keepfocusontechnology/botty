@@ -235,7 +235,7 @@ class Transmute:
     def inspect_cube(self,gemsToTransmute)-> InventoryCollection:
         return self.inspect_area(4, 3, roi=Config().ui_roi["cube_area_roi"], known_items=gemsToTransmute)
 
-    def _run_gem_transmutes(self, gemsToTransmute,gemsToPutBack, gemLoggerName) -> None:
+    def _run_gem_transmutes(self, gemsToTransmute, gemsToPutBack, gemLoggerName):
         Logger.info(f"Starting {gemLoggerName}gem transmute")
         self._last_game = self._game_stats._game_counter
         s = self.inspect_stash(gemsToTransmute)
@@ -258,12 +258,20 @@ class Transmute:
             if inv.count() >= 3:
                 self.open_cube()
                 for gem in inv.all_items():
-                    while inv.count_by(gem) > 0:
-                        for _ in range(3):
-                            next = inv.pop(gem)
-                            self.pick_from_inventory_at(*next)
-                        self.transmute()
-                        self.pick_from_cube_at(2, 3)
+                    # 检查该宝石数量是否大于等于3
+                    if gem not in inv._all_items or len(inv._all_items[gem]) < 3:
+                        Logger.info(f"Skip {gem}: less than 3 in inventory, not enough to transmute.")
+                        continue
+                    # 只要数量足够，才进行pop和合成
+                    for _ in range(3):
+                        next = inv.pop(gem)
+                        if next is None:
+                            # 可以记录日志或直接continue，避免TypeError
+                            Logger.warning(f"Inventory for {gem} is empty, skip pick_from_inventory_at.")
+                            continue
+                        self.pick_from_inventory_at(*next)
+                    self.transmute()
+                    self.pick_from_cube_at(2, 3)
                 self.close_cube()
                 self.put_back_all_gems(s,gemsToTransmute,gemsToPutBack)
             else:

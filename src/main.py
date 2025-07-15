@@ -91,7 +91,7 @@ def main():
     table.rows.append([Config().advanced_options['resume_key'], "Start / Pause Botty"])
     table.rows.append([Config().advanced_options['exit_key'], "Stop bot"])
     table.columns.header = ["hotkey", "action"]
-    print(table)
+    print(table)          
     print("\n")
 
     keyboard.add_hotkey(Config().advanced_options['auto_settings_key'], lambda: adjust_settings())
