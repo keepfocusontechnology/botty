@@ -12,7 +12,7 @@ from collections import OrderedDict
 from health_manager import set_pause_state
 from transmute import Transmute
 from utils.misc import wait, hms
-from utils.restart import safe_exit, restart_game
+from utils.restart import safe_exit, restart_game_v1
 from game_stats import GameStats
 from logger import Logger
 from config import Config
@@ -187,7 +187,8 @@ class Bot:
             Logger.error(message)
         if Config().general["restart_d2r_when_stuck"]:
             Logger.info("Restart botty")
-            restart_game(Config().general["d2r_path"], Config().advanced_options["launch_options"])
+            # restart_game(Config().general["d2r_path"], Config().advanced_options["launch_options"])
+            restart_game_v1()
             self.stop()
         else:
             Logger.info("Shut down botty")
@@ -461,6 +462,10 @@ class Bot:
             if self._curr_loc:
                 set_pause_state(True)
                 return self.trigger_or_stop("maintenance")
+        # If NPC movement failed (qual_kehk to malah), directly exit game
+        if "Failed to find or click save/exit button" in Logger.get_last_debug():
+            Logger.warning("NPC movement failed, exiting game directly")
+            return self.trigger_or_stop("end_game", failed=True)
         if not skills.has_tps():
             consumables.set_needs("tp", 20)
         set_pause_state(True)

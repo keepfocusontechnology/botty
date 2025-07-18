@@ -70,6 +70,36 @@ def set_d2r_always_on_top():
     else:
         print('OS not supported, unable to set D2R always on top')
 
+def set_battle_always_on_top():
+    if os.name == 'nt':
+        import win32gui
+        import win32con
+        
+        # 查找战网窗口
+        windows_list = []
+        win32gui.EnumWindows(lambda w, l: l.append((w, win32gui.GetWindowText(w))), windows_list)
+        
+        for hwnd, title in windows_list:
+            if title == "战网":
+                # 检查窗口是否处于最小化状态
+                if win32gui.IsIconic(hwnd):
+                    # 恢复窗口
+                    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+                
+                # 设置窗口置顶
+                win32gui.SetWindowPos(
+                    hwnd, 
+                    win32con.HWND_TOPMOST, 
+                    0, 0, 0, 0, 
+                    win32con.SWP_NOMOVE | win32con.SWP_NOSIZE
+                )
+                
+                print("Set 战网窗口 to be always on top and restored from minimized state")
+                return True
+    
+    print('OS not supported or unable to find 战网窗口')
+    return False
+
 def restore_d2r_window_visibility():
     if os.name == 'nt':
         windows_list = []

@@ -59,14 +59,14 @@
 //[Name] == Nefrune
 //[Name] == Ethrune
 //[Name] == Ithrune
-[Name] == Talrune
-[Name] == Ralrune
+//[Name] == Talrune
+//[Name] == Ralrune
 //[Name] == Ortrune
 //[Name] == Thulrune
-[Name] == Amnrune
-[Name] == Solrune
-//[Name] == Shaelrune
-//[Name] == Dolrune
+//[Name] == Amnrune
+//[Name] == Solrune
+[Name] == Shaelrune
+[Name] == Dolrune
 [Name] == Helrune
 [Name] == Iorune
 [Name] == Lumrune
@@ -252,7 +252,7 @@
 //-----------------------------------------------
 
 [Name] == Smallcharm && [Quality] == Magic # [Coldresist]+[Fireresist]+[Lightresist]+[Poisonresist] >= 20    // +5 All Res
-[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 15          // Plain +Hp
+[Name] == Smallcharm && [Quality] == Magic # [Maxhp] >= 19          // Plain +Hp
 [Name] == Smallcharm && [Quality] == Magic # [Itemmagicbonus] >= 7     // Plain +Magic Find
 [Name] == Smallcharm && [Quality] == Magic # [Coldresist] >= 11         // Plain +Cold Res
 [Name] == Smallcharm && [Quality] == Magic # [Fireresist] >= 11         // Plain +Fire Res
@@ -260,7 +260,7 @@
 [Name] == Smallcharm && [Quality] == Magic # [Poisonresist] >= 11       // Plain +Poison Res
 [Name] == Smallcharm && [Quality] == Magic # [Poisonmindam] >= 100       // Plain +100 Poison Dmg
 
-// Melee Small Charms ] >>>>>>>>>
+// Melee Small Charms  >>>>>>>>>
 [Name] == Smallcharm && [Quality] == Magic # [Firemindam] >= 26 && [Firemaxdam] >= 42
 [Name] == Smallcharm && [Quality] == Magic # [Lightmaxdam] >= 99
 [Name] == Smallcharm && [Quality] == Magic # [Coldmindam] >= 15 && [Coldmaxdam] >= 29

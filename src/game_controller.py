@@ -12,7 +12,7 @@ from health_manager import HealthManager
 from logger import Logger
 from messages import Messenger
 from screen import grab, get_offset_state
-from utils.restart import restart_game, safe_exit
+from utils.restart import restart_game_v1, safe_exit
 from utils.misc import kill_thread, set_d2r_always_on_top, restore_d2r_window_visibility
 
 
