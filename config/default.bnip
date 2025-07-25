@@ -59,12 +59,12 @@
 //[Name] == Nefrune
 //[Name] == Ethrune
 //[Name] == Ithrune
-//[Name] == Talrune
-//[Name] == Ralrune
+[Name] == Talrune
+[Name] == Ralrune
 //[Name] == Ortrune
 //[Name] == Thulrune
-//[Name] == Amnrune
-//[Name] == Solrune
+[Name] == Amnrune
+[Name] == Solrune
 [Name] == Shaelrune
 [Name] == Dolrune
 [Name] == Helrune
